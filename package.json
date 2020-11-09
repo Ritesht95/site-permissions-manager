@@ -1,0 +1,23 @@
+{
+  "name": "site-permissions-manager",
+  "version": "0.1.0",
+  "description": "This is a library to easily manage the browser permissions in a front-end JS project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ritesht95/site-permissions-manager.git"
+  },
+  "keywords": [
+    "browser",
+    "permissions"
+  ],
+  "author": "Ritesh Tailor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ritesht95/site-permissions-manager/issues"
+  },
+  "homepage": "https://github.com/Ritesht95/site-permissions-manager#readme"
+}
