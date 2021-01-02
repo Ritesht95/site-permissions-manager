@@ -36,7 +36,7 @@ function asyncPromptGeoLocationPermission() {
  * @method promptGeoLocationPermission
  * @param {*} successCallback
  * @param {*} errorCallback
- * @description This function is to get location permission state and return result via callback.
+ * @description This function is to get location permission state without prompting the user for location access and return result via callback.
  */
 function getGeoLocationPermission(successCallback, errorCallback) {
   try {
