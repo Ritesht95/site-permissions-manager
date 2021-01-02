@@ -1,14 +1,24 @@
-function promptGeoLocationPermission(callback, error) {
+/**
+ * @method promptGeoLocationPermission
+ * @param {*} successCallback
+ * @param {*} errorCallback
+ * @description This function is to prompt user for location permission if it is not already determined and invoke success or error callback based on that.
+ */
+function promptGeoLocationPermission(successCallback, errorCallback) {
   navigator.geolocation.getCurrentPosition(
     (position) => {
-      callback(position);
+      successCallback(position);
     },
     (err) => {
-      error(err);
+      errorCallback(err);
     }
   );
 }
 
+/**
+ * @method asyncPromptGeoLocationPermission
+ * @description This function is to prompt user for location permission if it is not already determined and returns promise.
+ */
 function asyncPromptGeoLocationPermission() {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
@@ -22,6 +32,12 @@ function asyncPromptGeoLocationPermission() {
   });
 }
 
+/**
+ * @method promptGeoLocationPermission
+ * @param {*} successCallback
+ * @param {*} errorCallback
+ * @description This function is to get location permission state and return result via callback.
+ */
 function getGeoLocationPermission(successCallback, errorCallback) {
   try {
     navigator.permissions
