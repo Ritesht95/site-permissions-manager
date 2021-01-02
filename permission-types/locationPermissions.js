@@ -1,23 +1,44 @@
 function promptGeoLocationPermission(callback, error) {
-    navigator.geolocation.getCurrentPosition((position) => {
-        console.log('position: ', position);
-        callback(position);
-    }, (err) => {
-        console.error('error: ', err);
-        error(err);
-    });
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      callback(position);
+    },
+    (err) => {
+      error(err);
+    }
+  );
 }
-function promptGeoLocationPermissionSync() {
-    return new Promise((resolve, reject)=> {
-        navigator.geolocation.getCurrentPosition((position) => {
-            resolve(position);
-        }, (err) => {
-            reject(err);
-        });
-    });
+
+function asyncPromptGeoLocationPermission() {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        resolve(position);
+      },
+      (err) => {
+        reject(err);
+      }
+    );
+  });
+}
+
+function getGeoLocationPermission(successCallback, errorCallback) {
+  try {
+    navigator.permissions
+      .query({ name: "geolocation" })
+      .then((result) => {
+        successCallback(result.state);
+      })
+      .catch((err) => {
+        errorCallback(err);
+      });
+  } catch (err) {
+    errorCallback(err);
+  }
 }
 
 exports.locationPermissions = {
-    promptGeoLocationPermission,
-    promptGeoLocationPermissionSync
-}
+  promptGeoLocationPermission,
+  asyncPromptGeoLocationPermission,
+  getGeoLocationPermission,
+};
