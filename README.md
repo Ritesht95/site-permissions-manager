@@ -1,6 +1,11 @@
 # site-permissions-manager
 This is a library which provides a wrapper to manage all the types of site permissions easily in frontend.
 
+## How to install
+```
+npm i site-permissions-manager
+```
+
 ## Functions
 ### promptGeoLocationPermission
 It is to prompt user for location permission if it is not already determined and invoke success or error callback based on user action.
