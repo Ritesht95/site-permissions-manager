@@ -1,3 +1,4 @@
+const { mediaPermissions } = require("./permission-types/mediaPermissions");
 const {
   locationPermissions,
 } = require("./permission-types/locationPermissions");
@@ -7,4 +8,5 @@ exports.permissions = {
   asyncPromptGeoLocationPermission:
     locationPermissions.asyncPromptGeoLocationPermission,
   getGeoLocationPermission: locationPermissions.getGeoLocationPermission,
+  getCameraPermission: mediaPermissions.getCameraPermission,
 };
