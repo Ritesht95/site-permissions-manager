@@ -52,3 +52,49 @@ async function getCameraPermission({
     }
   });
 }
+
+/**
+ * @method setAudioVideoStreamsOff
+ * @param {*} stream
+ * @description This function is to stop both video and audio stream
+ */
+function setAudioVideoStreamsOff(stream) {
+  stream.getTracks().forEach((track) => {
+    if (track.readyState == "live") {
+      track.stop();
+    }
+  });
+}
+
+/**
+ * @method setVideoStreamOff
+ * @param {*} stream
+ * @description This function is to stop video stream only
+ */
+function setVideoStreamOff(stream) {
+  stream.getTracks().forEach((track) => {
+    if (track.readyState == "live" && track.kind === "video") {
+      track.stop();
+    }
+  });
+}
+
+/**
+ * @method setAudioStreamOff
+ * @param {*} stream
+ * @description This function is to stop audio stream only
+ */
+function setAudioStreamOff(stream) {
+  stream.getTracks().forEach((track) => {
+    if (track.readyState == "live" && track.kind === "audio") {
+      track.stop();
+    }
+  });
+}
+
+exports.mediaPermissions = {
+  getCameraPermission,
+  setAudioVideoStreamsOff,
+  setVideoStreamOff,
+  setAudioStreamOff,
+};
