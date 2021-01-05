@@ -1,15 +1,17 @@
 # site-permissions-manager
 
-This is a library which provides a wrapper to manage all the types of site permissions easily in frontend.
+This is a library which provides a wrapper to manage all the types of site permissions using JavaScript.
+
+## How to install
+```
+npm i site-permissions-manager
+```
 
 ## Functions
-
 ### promptGeoLocationPermission
-
 It is to prompt user for location permission if it is not already determined and invoke success or error callback based on user action.
 
 #### Usage
-
 ```
 permissions.promptGeoLocationPermission((result) => {
 	//TODO: User grants location permission.
@@ -23,7 +25,6 @@ permissions.promptGeoLocationPermission((result) => {
 It is to prompt user for location permission if it is not already determined and returns promise.
 
 #### Usage
-
 ```
 try {
 	const result = await permissions.asyncPromptGeoLocationPermission();
@@ -49,7 +50,6 @@ permissions.asyncPromptGeoLocationPermission()
 It is to get location permission state without prompting user for location access and return result via callback.
 
 #### Usage
-
 ```
 permissions.getGeoLocationPermission((locationState) => {
 	// TODO: Action based on location state
