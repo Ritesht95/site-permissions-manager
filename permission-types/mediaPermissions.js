@@ -1,5 +1,5 @@
 /**
- * @method getCameraPermission
+ * @method getCameraMicroPhonePermission
  * @param {Object} args
  * @param {Boolean} args.video
  * @param {Number} args.minWidth
@@ -9,7 +9,7 @@
  * @param {Boolean} args.audio
  * @description This function is to prompt user for media permissions like camera and microphone. It will return a promised based on the user action for permission request.
  */
-async function getCameraPermission({
+async function getCameraMicroPhonePermission({
   video,
   minWidth,
   maxWidth,
@@ -93,7 +93,7 @@ function setAudioStreamOff(stream) {
 }
 
 exports.mediaPermissions = {
-  getCameraPermission,
+  getCameraMicroPhonePermission,
   setAudioVideoStreamsOff,
   setVideoStreamOff,
   setAudioStreamOff,

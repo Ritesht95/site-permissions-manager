@@ -8,7 +8,7 @@ exports.permissions = {
   asyncPromptGeoLocationPermission:
     locationPermissions.asyncPromptGeoLocationPermission,
   getGeoLocationPermission: locationPermissions.getGeoLocationPermission,
-  getCameraPermission: mediaPermissions.getCameraPermission,
+  getCameraMicroPhonePermission: mediaPermissions.getCameraMicroPhonePermission,
   setAudioStreamOff: mediaPermissions.setAudioStreamOff,
   setVideoStreamOff: mediaPermissions.setVideoStreamOff,
   setAudioVideoStreamsOff: mediaPermissions.setAudioVideoStreamsOff,
