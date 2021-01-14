@@ -80,10 +80,10 @@ This function is to continuously track user location as it changes/navigates. It
 ```
 const locationTrackingId = permissions.startLocationTracking({
       successCallback: (position) => {
-        // ToDo: Task on successfully receiving the position 
+        // TODO: Task on successfully receiving the position 
       },
       errorCallback: (err) => {
-        // ToDo: Task on error
+        // TODO: Task on error
       },
       positionOptions: {enableHighAccuracy: true, timeout: 10000, maximumAge: 5000},
       thresholdTime: 3000,
