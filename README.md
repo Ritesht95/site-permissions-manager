@@ -13,11 +13,9 @@ import { permissions } from "site-permissions-manager";
 ## Location Permission Functions
 
 #### promptGeoLocationPermission
-
 It is to prompt user for location permission if it is not already determined and invoke success or error callback based on user action.
 
 ##### Usage
-
 ```
 permissions.promptGeoLocationPermission((result) => {
 	//TODO: User grants location permission.
