@@ -1,6 +1,6 @@
 {
   "name": "site-permissions-manager",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "This is a library to easily manage the browser permissions in a front-end JS project.",
   "main": "index.js",
   "scripts": {
