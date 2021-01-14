@@ -66,6 +66,39 @@ permissions.getGeoLocationPermission((locationState) => {
 });
 ```
 
+#### startLocationTracking
+
+This function is to continuously track user location as it changes/navigates. It will return `locationTrackingId` which will later be used to stop tracking location.
+- Position object will be return with `successCallback` or any error will be return with `errorCallback`.
+- PostionOptions can be set by passing `positionOptions` parameter. (i.e. `{enableHighAccuracy: true, timeout: 10000, maximumAge: 5000}`)
+	- `enableHighAccuracy`: If true and if the device is able to provide a more accurate position. Default value is true.
+	- `timeout`: Value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. Default value is infinity.
+	- `maximumAge`: Value indicating the maximum age in milliseconds of a possible cached position that is acceptable to return. Default value is 0.
+- A threshold can also be set by passing the miliseconds for `thresholdTime` parameter.
+##### Usage
+
+```
+const locationTrackingId = permissions.startLocationTracking({
+      successCallback: (position) => {
+        // ToDo: Task on successfully receiving the position 
+      },
+      errorCallback: (err) => {
+        // ToDo: Task on error
+      },
+      positionOptions: {enableHighAccuracy: true, timeout: 10000, maximumAge: 5000},
+      thresholdTime: 3000,
+    });
+```
+#### stopLocationTracking
+
+This function is to stop tracking user location which was started before by passing `locationTrackingId`.
+
+##### Usage
+
+```
+permissions.stopLocationTracking(locationTrackingId);
+```
+
 ## Media Permission Functions
 
 #### getCameraMicroPhonePermission
