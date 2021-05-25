@@ -1,5 +1,7 @@
 # site-permissions-manager
 
+[![npm](https://img.shields.io/npm/dt/site-permissions-manager.svg?style=flat-square)](https://www.npmjs.com/package/site-permissions-manager) [![npm](https://img.shields.io/npm/v/site-permissions-manager.svg?style=flat-square)](https://www.npmjs.com/package/site-permissions-manager) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 This is a library which provides a wrapper to manage all the types of site permissions using JavaScript.
 
 ## How to install
